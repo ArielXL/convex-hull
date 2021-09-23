@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem BSHEEP</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem BSHEEP"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/BSHEEP/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?7" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?7" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+
+	<script type="text/javascript">
+	(function(){
+		var bsa_optimize=document.createElement('script');
+		bsa_optimize.type='text/javascript';
+		bsa_optimize.async=true;
+		bsa_optimize.src='https://cdn4.buysellads.net/pub/spoj.js?'+(new Date()-new Date()%600000);
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+	})();
+	</script>
+
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+					
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        
+						        						      	
+						      							      	<li style="margin-right: 0px;">
+						      		<a href="/manageaccount/">
+						      			<span tabindex="0" id="profile-menu" data-trigger="hover" data-container="body" data-toggle="popover" data-html="true" data-placement="left" data-content="You filled 38% of your profile, maybe you want to add some more?"><i class="fa fa-exclamation-triangle text-danger"></i></span>
+						      		</a>
+						      	</li>
+						      						        
+					        <li class="dropdown profile">
+					        	<a href="#" class="username_dropdown dropdown-toggle" data-toggle="dropdown">
+					        		<img width="20" height="20" src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e&s=20?20210810" class="avatar small-left-margin"/>
+					        		<!-- ariel_pd -->PROFILE&nbsp;<span class="caret"></span>
+					        	</a>	
+			
+									<ul class="dropdown-menu text-right pull-right" role="menu" aria-labelledby="dropdownUser">
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="/myaccount"><span class="fa fa-user fa-fw"></span>&nbsp; My profile</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="/manageaccount"><span class="fa fa-cogs fa-fw"></span>&nbsp; Manage profile</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="/status/ariel_pd"><span class="fa fa-history fa-fw"></span>&nbsp; Submissions history</a></li>
+										<li class="divider"></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="/logout"><span class="fa fa-sign-out fa-fw"></span>&nbsp; Sign out</a></li>
+									</ul>
+								
+					        </li>
+					        
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">Build the Fence</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+		<li><a href="/status/BSHEEP,ariel_pd/" class="">My status</a></li>		<li><a href="/status/BSHEEP/" class="">Status</li></a>
+		<li><a href="/ranks/BSHEEP/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">BSHEEP - Build the Fence</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+								 
+				
+					<a href="/problems/tag/convex-hull"><span class=" tag-conception-paradigm- tag-link problem-tag" data-tagid="38">#convex-hull<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+						</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<P align=justify>
+At the beginning of spring all the sheep move to the higher pastures in the mountains. If there are thousands of them, it is well worthwhile gathering them together in one place. But sheep don't like to leave their grass-lands. Help the shepherd and build him a fence which would surround all the sheep. The fence should have the smallest possible length! Assume that sheep are negligibly small and that they are not moving. Sometimes a few sheep are standing in the same place. If there is only one sheep, it is probably dying, so no fence is needed at all...
+</p>
+<H3>Input</h3>
+<P align=justify>
+<br>t [the number of tests <= 100]
+<br>[empty line]
+<br>n [the number of sheep <= 100000]
+<br><i>x</i><sub>1</sub> <i>y</i><sub>1</sub> [coordinates of the first sheep]
+<br>...
+<br><i>x<sub>n</sub></i> <i>y<sub>n</sub></i>
+<br>[integer coordinates from -10000 to 
+10000]
+<br>[empty line]
+<br>[other lists of sheep]
+<br>
+<br>
+Text grouped in [ ] does not appear in the input file. Assume that sheep are numbered in the input order.
+</p>
+<H3>Output</h3>
+<P align=justify>
+<br>o [length of circumference, rounded to 2 decimal places]
+<br>p1 p2 ... pk 
+<br>[the sheep that are standing in the corners of the fence; the first one should be positioned bottommost and as far to the left as possible, the others ought to be written in anticlockwise order; ignore all sheep standing in the same place but the first to appear in the input file; the number of sheep should be the smallest possible]
+<br>[empty line]
+<br>[next solutions]
+</p>
+<H3>Example</h3>
+<pre>
+Input:
+8
+
+5
+0 0
+0 5
+10 5
+3 3
+10 0
+
+1
+0 0
+
+3
+0 0
+1 0
+2 0
+
+4
+0 0
+0 0
+0 1
+1 0
+
+3
+0 0
+0 1
+1 0
+
+6
+0 0
+-1 -1
+1 1
+2 2
+3 3
+4 4
+
+2
+10 0
+0 0
+
+7
+-3 -4
+2 -3
+4 3
+-4 2
+0 5
+2 -3
+-1 4
+
+Output:
+30.00
+1 5 3 2
+
+0.00
+1
+
+4.00
+1 3
+
+3.41
+1 4 3
+
+3.41
+1 3 2
+
+14.14
+2 6
+
+20.00
+2 1
+
+26.98
+1 2 3 5 4
+
+</pre>
+<b>Warning: large Input/Output data, be careful with certain languages</b>
+</div>
+
+<div class="text-center">
+	<a href="/submit/BSHEEP/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+		<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="/problems/BSHEEP/cstart=10" class="pager_link">2</a></li> 
+							<li><a href="/problems/BSHEEP/cstart=20" class="pager_link">3</a></li> 
+						<li><a href="/problems/BSHEEP/cstart=10" class="pager_link">Next</a></li>
+		<li><a href="/problems/BSHEEP/cstart=30" class="pager_link">&gt;</a></li>
+	</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/4792ffb0a883ffe325bd4b7ca6f81fac?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/crc9">Piotr Gliszczyñski</a>: 
+								<span style="font-size: 10px; color: #666;">2020-09-08 20:51:19</span>
+		<br/>
+				<p>Did anyone managed to solve it in python ? I had many attempts with optimalistation but always time runs out.<br/><br/>[NG]: https://www.spoj.com/ranks/BSHEEP/lang=PYTH%202.7</p>
+				<b>Last edit: 2020-09-10 01:34:20</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/ae4de8ca793e38f5b811135aa5b2cd28?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/luismbaezco">luismbaezco</a>: 
+								<span style="font-size: 10px; color: #666;">2020-06-22 03:19:35</span>
+		<br/>
+				<p>Convex Hull - Monotone Chain - AC</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/9fab592d4d7da07d1d7675ff844edfae?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/lnxdx">lnxdx</a>: 
+								<span style="font-size: 10px; color: #666;">2019-10-04 15:22:22</span>
+		<br/>
+				<p>AC in two goes.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/1893348103f4da3d3d4e24477b01f402?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/imkiller">imkiller</a>: 
+								<span style="font-size: 10px; color: #666;">2018-05-31 15:46:55</span>
+		<br/>
+				<p>ConvexHull GoodOne!</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/cf97e9cda72af77d6045750fafc87a21?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/jed010302">jed010302</a>: 
+								<span style="font-size: 10px; color: #666;">2018-02-19 01:23:59</span>
+		<br/>
+				<p>Seems like there is no case where all points are collinear.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/03646a0285a3ee03faffbe3adeb9d678?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/mayank_124">[Mayank Pratap]</a>: 
+								<span style="font-size: 10px; color: #666;">2016-09-27 06:38:29</span>
+		<br/>
+				<p>AC in one Go :)     THink Simple.</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/2c3f1d0a4d3a31db01943701748a39dc?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/sanjit">Sanjit Majumdar</a>: 
+								<span style="font-size: 10px; color: #666;">2016-08-18 17:03:50</span>
+		<br/>
+				<p>Got accepted in 0.45s using Andrew's monotone chain convex hull algorithm</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/271a6728cb9a5528220aaa6afa0608ba?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/rsampaths16">Sampath Ravolaparthi</a>: 
+								<span style="font-size: 10px; color: #666;">2016-02-01 19:05:15</span>
+		<br/>
+				<p>Hell No.......!!<br/>Kept debugging my algo when I just had to change float to double<br/>Forgot to keep the sum In mind and Only assumed for one segment.....!!</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/630575d45aadde2d968f828b73fc9d72?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/krypto_phile">krypto_phile</a>: 
+								<span style="font-size: 10px; color: #666;">2016-01-19 19:54:17</span>
+		<br/>
+				<p>Easy question. Absolutely straightforward! AC in 1 go :P<br/></p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="https://www.gravatar.com/avatar/6b256deea2dce8c9fc152b2bc848300a?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/kart123">kartikay singh</a>: 
+								<span style="font-size: 10px; color: #666;">2016-01-18 09:34:05</span>
+		<br/>
+				<p>Easy convo hull :-)<br/>Graham scan will be suffice :D</p>
+				<b>Last edit: 2016-01-18 09:34:25</b>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+                <tr>
+                <td colspan="2" height="20px"></td>
+        </tr>
+        <form method="post" action="/comment/BSHEEP/add/">
+        <tr> <td style="" colspan="2">Leave a Comment</td> </tr>
+        <tr>
+                <td valign="top"></td>
+                <td><textarea name="content" rows="3" class="form-control"></textarea></td>
+        </tr>
+        <tr>
+                <td colspan="2" style=""><br/>
+                        <input type="submit" value="Publish" class="btn btn-default"/>
+                        <input type="hidden" name="pcode" value="BSHEEP"/>
+                </td>
+        </tr>
+<tr>
+<td colspan="2" style="padding-left:5px; color: #999;">
+<br/>
+Notes:
+<br>1. Don't post any source code here.
+<br>2. Please be careful, leave short comments only. Don't spam here.
+<br>3. For more discussion (hints, ideas, solutions) please visit our <a href="/forum">forum</a>.
+<br>4. Authors of the problems are allowed to delete the post and use html code here (e.g. to provide some useful links).
+</td>
+</tr>
+        </form>
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/BSHEEP/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+		
+		<div class="h"><!-- Spoj_S2S_Sidebar_ROS_Pos1 --><div id="bsa-zone_1621518317191-9_123456"></div></div>
+
+		
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/mima">mima</a></td></tr>
+			<tr><td>Date:</td><td>2004-06-01</td></tr>
+			<tr><td>Time limit:</td><td>7s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: NODEJS PERL6 VB.NET </td></tr>
+			<tr><td>Resource:</td><td>-</td></tr>													</tbody>
+		</table>
+	
+		<!-- BEGIN: Voting for problem -->
+												<div class="panel panel-default" id="vote-requirement-message">
+					<div class="panel-heading">
+						<h4 class="panel-title">Vote requirements<span class="fa fa-exclamation-triangle pull-right grey"></span></h4>
+					</div>
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li><span class="text-danger fa fa-times fa-fw"></span>&nbsp;&nbsp;user for 0 from 5 needed days							</li>
+							<li><span class="text-danger fa fa-times fa-fw"></span>&nbsp;&nbsp;solved 0 from 15 needed problems							</li>
+							<li><span class="text-danger fa fa-times fa-fw"></span>&nbsp;&nbsp;solve this problem</li>
+						</ul>
+					</div>
+				</div><!-- end #vote-requirement-message -->
+					
+				
+		<!-- END: Voting the problem -->
+	
+				
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Own tags</h4>
+				</div>
+				<div class="panel-body">
+			
+					<div id="problem-mytags">
+						<p>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+			<a href="#" class="mytag" data-id=""><span class="label label-default">#</span></a>
+	</p>					</div>
+					
+					<div class="input-group input-group-sm">
+				      <input type="text" class="form-control" placeholder="Tag name" id="problem-mytags-new">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" id="problem-mytags-btn-add">Add</button>
+				      </span>
+				    </div><!-- /input-group -->
+				    
+				    
+				    <script type="text/javascript">
+				    $(document).ready(function(){
+				    	$(document).on('click', '#problem-mytags-btn-add', function(){
+				    		$.ajax({
+				    			url: '/?a=tags&act=cpriv',
+				    			method: 'post',
+				    			dataType: 'json',
+				    			data: {'name': $("#problem-mytags-new").val(), 'pid': '26'},
+				    			success: function(data){
+				    				if(data['result'] == 'success'){
+				    					$('#problem-mytags').html(data['html']);
+				    				}
+				    				$("#problem-mytags-new").val('');
+				    				$("#problem-mytags-new").focus();
+				    			},
+				    			error: function(data){
+				    				//alert('error');
+				    			}
+				    		});
+				    	});
+				    	$(document).on('click', '.mytag', function(){
+				    		
+				    		var tid = $(this).attr('data-id');
+				    		var pid = '26';
+				    		
+				    		$.ajax({
+				    			url: '/?a=tags&act=spriv',
+				    			method: 'post',
+				    			dataType: 'json',
+				    			data: {'pid': pid, 'tid': tid},
+				    			success: function(data){
+				    				if(data['result'] == 'success'){
+				    					$('#problem-mytags').html(data['html']);
+				    				}
+				    			},
+				    			error: function(data){
+				    				//alert('error');
+				    			}
+				    		});
+				    		
+				    		
+				    		return false;
+				    	});
+				    });
+				    </script>
+				    
+		
+				</div>
+		</div><!-- end .panel.panel-default -->
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=26&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-10">
+					<p><a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/sphereengine">API</a> | <a href="/sphereengine-widget">Widgets</a></p>
+					<p>Legal: 
+					   <a href="/legal-tos/" target="_blank">Terms of Service</a> | <a href="/legal-pp/" target="_blank">Privacy Policy</a> | <a href="/legal-gdpr/" target="_blank">GDPR Info</a>
+					</p>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+  if(typeof _bsa !== 'undefined' && _bsa) {
+    // format, zoneKey, segment:value, options
+    _bsa.init('flexbar', 'CK7D4KJL', 'placement:demo');
+  }
+})();
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>
