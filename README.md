@@ -25,13 +25,13 @@ Los códigos propuestos para los problemas anteriormente mencionados podemos enc
 
 ## Resumen
 
-|                          Problemas                           |   Sitio de Programación    |                       Código (cpp)                       |     Resultado      |
-| :----------------------------------------------------------: | :------------------------: | :------------------------------------------------------: | :----------------: |
-|  [Wall](https://acm.timus.ru/problem.aspx?space=1&num=1185)  |     Timus Online Judge     |               [wall.cpp](./codes/Wall.cpp)               | :heavy_check_mark: |
-|      [Polygon](https://www.codechef.com/problems/CF224)      |          CodeChef          |            [polygon.cpp](./codes/Polygon.cpp)            | :heavy_check_mark: |
-|   [Build the Fence](https://www.spoj.com/problems/BSHEEP/)   | Sphere Online Judge (SPOJ) |      [build_fence.cpp](./codes/Build the fence.cpp)      | :heavy_check_mark: |
-|  [SCUD Busters](https://onlinejudge.org/external/1/109.pdf)  |      UVa Online Judge      |         [scud_busters](./codes/SCUD Busters.cpp)         | :heavy_check_mark: |
-| [Useless Title Packers](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1006) |      UVa Online Judge      | [unless_title_packers](./codes/Useless Tile Packers.cpp) | :heavy_check_mark: |
+|                          Problemas                           |   Sitio de Programación    |                      Código (cpp)                      |     Resultado      |
+| :----------------------------------------------------------: | :------------------------: | :----------------------------------------------------: | :----------------: |
+|  [Wall](https://acm.timus.ru/problem.aspx?space=1&num=1185)  |     Timus Online Judge     |              [wall.cpp](./codes/Wall.cpp)              | :heavy_check_mark: |
+|      [Polygon](https://www.codechef.com/problems/CF224)      |          CodeChef          |           [polygon.cpp](./codes/Polygon.cpp)           | :heavy_check_mark: |
+|   [Build the Fence](https://www.spoj.com/problems/BSHEEP/)   | Sphere Online Judge (SPOJ) |      [build_fence.cpp](./codes/BuildTheFence.cpp)      | :heavy_check_mark: |
+|  [SCUD Busters](https://onlinejudge.org/external/1/109.pdf)  |      UVa Online Judge      |        [scud_busters](./codes/SCUDBusters.cpp)         | :heavy_check_mark: |
+| [Useless Title Packers](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1006) |      UVa Online Judge      | [unless_title_packers](./codes/UselessTilePackers.cpp) | :heavy_check_mark: |
 
 ## Sobre la License
 
