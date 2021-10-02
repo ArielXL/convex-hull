@@ -13,7 +13,7 @@ que contiene a todos los puntos en un plano, es decir, la menor envoltura convex
 El análisis teórico del algoritmo será acompañado por la resolución de problemas cuya solución
 utiliza como paso principal el cálculo de *convex hull* y, en muchos casos, será guiado por él. Además
 de los problemas se verán análisis e implementación donde mostraremos la gran potencia y utilidad de
-este algoritmo. Para un análisis más detallado puede consultar nuestro documento adjunto [Convex Hull](./Convex Hull.pdf).
+este algoritmo. Para un análisis más detallado puede consultar nuestro documento adjunto [Convex Hull](./doc/convex_hull.pdf).
 
 ## Sobre los problemas
 
@@ -29,9 +29,9 @@ Los códigos propuestos para los problemas anteriormente mencionados podemos enc
 | :----------------------------------------------------------: | :------------------------: | :----------------------------------------------------: | :----------------: |
 |  [Wall](https://acm.timus.ru/problem.aspx?space=1&num=1185)  |     Timus Online Judge     |              [wall.cpp](./codes/Wall.cpp)              | :heavy_check_mark: |
 |      [Polygon](https://www.codechef.com/problems/CF224)      |          CodeChef          |           [polygon.cpp](./codes/Polygon.cpp)           | :heavy_check_mark: |
-|   [Build the Fence](https://www.spoj.com/problems/BSHEEP/)   | Sphere Online Judge (SPOJ) |      [build_fence.cpp](./codes/BuildTheFence.cpp)      | :heavy_check_mark: |
-|  [SCUD Busters](https://onlinejudge.org/external/1/109.pdf)  |      UVa Online Judge      |        [scud_busters](./codes/SCUDBusters.cpp)         | :heavy_check_mark: |
-| [Useless Title Packers](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1006) |      UVa Online Judge      | [unless_title_packers](./codes/UselessTilePackers.cpp) | :heavy_check_mark: |
+|   [Build the Fence](https://www.spoj.com/problems/BSHEEP/)   | Sphere Online Judge (SPOJ) |      [build fence.cpp](./codes/BuildTheFence.cpp)      | :heavy_check_mark: |
+|  [SCUD Busters](https://onlinejudge.org/external/1/109.pdf)  |      UVa Online Judge      |        [scud busters](./codes/SCUDBusters.cpp)         | :heavy_check_mark: |
+| [Useless Title Packers](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1006) |      UVa Online Judge      | [unless title packers](./codes/UselessTilePackers.cpp) | :heavy_check_mark: |
 
 ## Sobre la License
 
